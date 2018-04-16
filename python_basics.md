@@ -1,4 +1,9 @@
 # Physik mit dem Raspberry Pi - Python-Basics 
+
+__16.04.2018, Sebastian Schmidt (sebastian.seb.schmidt@fau.de)__
+
+__[github.com/schmidtseb/RaspberryPiUebung]()__
+
 ## Interactive Shell
 
 Durch die Eingabe von __python__ im Linux-Terminal wird eine *interactive shell* gestartet. Diese erlaubt die Ausführung kurzer Programmsegmente und das Testen von Befehlen. Längere Programme sollten jedoch als Textdatei gespeichert und anschließend ausgeführt werden.
@@ -9,7 +14,7 @@ Starte eine *interactive shell* und nutze diese als Taschenrechner!
 
 ## Kommentare
 
-Um Code lesbarer zu gestalten, ist eine Dokumentation mit Kommentaren von äußerster Wichtigkeit. Einzeilige Kommentare beginnen hierbei mit __#__, mehrzeilige Kommentare beginnen und enden mit ___'''___. 
+Um Code lesbarer zu gestalten, ist eine Dokumentation mit Kommentaren von äußerster Wichtigkeit. Einzeilige Kommentare beginnen hierbei mit __#__, mehrzeilige Kommentare beginnen und enden mit __'''__. 
 
 ### Beispiele
 
@@ -27,8 +32,6 @@ zwei Zeilen umfasst.
 Eine Variable ist ein Container für Daten, dessen Inhalt innerhalb eines Programmablaufs gesetzt, verändert und abgerufen werden kann.
 
 Die Wertezuweisung findet über den __=__-Operator statt. Anders als bei vielen anderen Programmiersprachen, ist die Angabe eines Datentyps bei Python nicht notwendig, da dieser anhand der zugewiesenen Information selbst erkannt wird.
-
-
 
 ### Beispiele
 
@@ -69,10 +72,8 @@ Dies erlaubt die Addition von Zeichenketten, was einer Aneinanderreihung entspri
 
 ```python
 print(str(5) + ' ist ungleich ' + str(10))
-> 5	ist ungleich 10
+> 5 ist ungleich 10
 ```
-
-
 
 ### Aufgabe
 
@@ -171,6 +172,8 @@ if zahl > 5:
 	y = True
   else:
     y = False
+else:
+  y = False
 
 print(y)
 ```
@@ -203,7 +206,8 @@ Eine __while__-Schleife wird ausgeführt, solange ihre Bedingung erfüllt ist. E
 #### Abbruch einer Endlosschleife mittels break
 
 - Schreibe eine Endlosschleifen, in der ein Zähler erhöht wird
-- Brich die Schleife ab, sobald der Zähler größer als 50 ist
+- Gib stets den aktuellen Wert des Zählers aus
+- Brich die Schleife ab, sobald der Zähler größer als 10 ist
 
 #### Ausgabe der Fibonacci-Zahlen (P)
 
@@ -280,7 +284,7 @@ Eine Liste ist ein Container, der der Speicherung von mehreren Elementen dient. 
 ### Aufgabe
 
 - Erzeuge eine leere Liste
-- Füge in einer __while__-Schleife die Zahlen von 0 bis 50 in die Liste ein
+- Füge in einer __while__-Schleife die Zahlen von 0 bis 15 in die Liste ein
 
 ## for-Schleife
 
@@ -293,7 +297,7 @@ print( range(2, 8, 2) )
 > [2, 4, 6]
 ```
 
-Die Angabe des Minimums und der Schrittgröße sind hierbei optional und sind standardmäßig auf Werte von 0 und 1 gesetzt. 
+Die Angabe des Minimums und der Schrittgröße sind hierbei optional. Diese sind standardmäßig auf Werte von 0 und 1 gesetzt. 
 
 Der Grund, warum die zurückgegebene Liste bis zu einem Wert von Maximum - 1 reicht, ist, dass die Funktion häufig in einer __for__-Schleife verwendet wird, d.h.
 
@@ -316,7 +320,7 @@ for element in l:
 > 8
 ```
 
-### Aufgaben:
+### Aufgaben
 
 #### Einfache Schleife
 
@@ -331,7 +335,49 @@ l = [3, 8, 2, 5, 8]
 ```
 
 - Zuerst, initialisiere eine Summenvariable mit 0
-- Iteriere über die Elemente von __l__ und addiere in jedem Schritt den Wert des jeweiligen Elements zur Summenvariable und gib diese anschließend aus
+- Iteriere über die Elemente von __l__ in einer __for__-Schleife und addiere in jedem Schritt den Wert des jeweiligen Elements zur Summenvariable und gib diese anschließend aus
+
+## Bitweise Operatoren
+
+Eine ganzzahlige Zahl kann mittels __bin()__ in ihre binäre Form umgewandelt werden
+
+```python
+print( bin(10) )
+> 0b1010
+```
+
+Bitweise Operatoren erlauben die Manipulation auf der Ebene der einzelnen Bits einer Zahl. Die Anwendung kann dabei auf eine einzelne Bitfolge, wie bei den Operatoren:
+
+- __~__ - bitweises Not
+- __<<__, __>>__ - bitweiser Shift
+
+oder auf zwei Bitfolgen, wie bei den folgenden Operatoren erfolgen:
+
+- _&_ - bitweises Und
+- _|_ - bitweises Oder
+- _^_ - bitweises XOR (exklusives Oder) 
+
+### Beispiele
+
+```python
+bin( 0b0110 | 0b1001 )
+> 0b1111
+bin( 0b1010 & 0b1001 )
+> 0b1000
+bin( 0b1010 ^ 0b1001 )
+> 0b11
+bin( 0b0001 << 2 )
+> 0b100
+```
+
+### Aufgaben
+
+Gegeben ist die Zahl 238 = 0b11101110
+
+- Setze das vierte Bit (Zählung beginnt bei 0 und erfolgt von rechts nach links) 
+- Flippe die Bits an den Stellen 1, 5 und 7 (XOR)
+- Verschiebe das vorherige Ergebnis um 3 Stellen nach rechts
+- Gib das finale Ergebnis auf dem Bildschirm aus
 
 ## Funktionsdefinition
 
@@ -343,7 +389,7 @@ def <Funktionsname>(parameter1, paramater2, ...):
   return <Wert>
 ```
 
-Die Rückgabe des Ergebnisses erfolgt über den __return__-Befehl, welcher optional ist. Auch eine Rückgabe mehrerer Werte ist möglich - diese werden dann über ein Komma abgetrennt.
+Die Rückgabe des Ergebnisses erfolgt über den __return__-Befehl, welcher optional ist. Auch eine Rückgabe mehrerer Werte ist möglich - diese werden dann über ein Komma abgetrennt (__return ergebnis1, ergebnis2, ...__).
 
 Der Aufruf erfolgt schließlich über:
 
@@ -367,7 +413,7 @@ print( Summe(3, 4) )
 ### Aufgabe
 
 - Definiere eine Funktion, der zwei Zahlen übergeben werden. Die Funktion addiert und multipliziert diese miteinander und gibt schließlich die beiden Ergebnisse zurück
-- Stelle die Ergebnisse anhand zweier Beispielzahlen am Bildschirm dar
+- Stelle die Ergebnisse anhand von Paaren von Beispielzahlen am Bildschirm dar
 
 ## Ausgabe in Datei
 
@@ -398,7 +444,7 @@ f.close()
 ### Aufgabe (P)
 
 - Öffne eine Datei
-- Beschreibe diese in einer Schleife deiner Wahl mit den Zahlen von 0 bis 50 in der ersten Spalte und den Zahlen von 50 bis 0 in der zweiten Spalte. __Beachte__: Addition von Zeichenketten über __+__-Operator möglich (so z.B. Einfügung von Tabulatoren möglich: str(zahl1) + '\t' + str(zahl2))
+- Beschreibe diese in einer Schleife deiner Wahl mit den Zahlen von 0 bis 10 in der ersten Spalte und den Zahlen von 10 bis 0 in der zweiten Spalte. __Beachte__: Eine Addition von Zeichenketten ist über den __+__-Operator möglich (so z.B. Einfügung von Tabulatoren möglich: str(zahl1) + '\t' + str(zahl2))
 
 ## import-Befehl
 
