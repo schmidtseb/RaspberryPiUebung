@@ -1,0 +1,156 @@
+
+
+*******************************************************************************
+Sun May  6 15:06:22 2018
+
+
+FIT:    data read from 'sample.dat'
+        format = z
+        #datapoints = 100
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = A*exp(-(x-mu)**2/(2*sigma**2)) + b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A             mu            b            
+   0 6.0236741571e+02   0.00e+00  2.74e+00    9.200000e+00   3.200000e+00   1.000000e-01
+   7 2.0205560468e+02  -9.31e-02  2.74e-07    1.072678e+01   5.094258e+00   6.272873e-01
+
+After 7 iterations the fit converged.
+final sum of squares of residuals : 202.056
+rel. change during last iteration : -9.30544e-07
+
+degrees of freedom    (FIT_NDF)                        : 97
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.44328
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.08305
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A               = 10.7268          +/- 0.4821       (4.495%)
+mu              = 5.09426          +/- 0.1113       (2.184%)
+b               = 0.627287         +/- 0.1649       (26.29%)
+
+correlation matrix of the fit parameters:
+                A      mu     b      
+A               1.000 
+mu              0.001  1.000 
+b              -0.484 -0.000  1.000 
+
+
+*******************************************************************************
+Sun May  6 15:07:38 2018
+
+
+FIT:    data read from 'sample.dat'
+        format = z
+        #datapoints = 100
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = A*exp(-(x-mu)**2/(2*sigma**2)) + b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A             mu            sigma         b            
+   0 2.0205560468e+02   0.00e+00  4.11e+00    1.072678e+01   5.094258e+00   2.000000e+00   6.272873e-01
+   4 1.0133108156e+02  -2.42e-01  4.11e-04    9.978267e+00   5.075513e+00   2.987784e+00  -6.418562e-02
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 101.331
+rel. change during last iteration : -2.41981e-06
+
+degrees of freedom    (FIT_NDF)                        : 96
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.02739
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.05553
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A               = 9.97827          +/- 0.3188       (3.195%)
+mu              = 5.07551          +/- 0.1041       (2.05%)
+sigma           = 2.98778          +/- 0.1217       (4.074%)
+b               = -0.0641856       +/- 0.149        (232.1%)
+
+correlation matrix of the fit parameters:
+                A      mu     sigma  b      
+A               1.000 
+mu              0.001  1.000 
+sigma          -0.294 -0.001  1.000 
+b              -0.330  0.000 -0.519  1.000 
+
+
+*******************************************************************************
+Sun May  6 15:12:32 2018
+
+
+FIT:    data read from 'sample.dat' u 1:2:(sqrt(abs($2))) yerrors
+        format = x:z:s
+        #datapoints = 100
+function used for fitting: f(x)
+	f(x) = A*exp(-(x-mu)**2/(2*sigma**2)) + b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A             mu            sigma         b            
+   0 7.6480783433e+01   0.00e+00  2.04e+00    9.978267e+00   5.075513e+00   2.987784e+00  -6.418562e-02
+   3 6.9106981923e+01  -9.52e-01  2.04e-03    1.030314e+01   4.949392e+00   2.658346e+00  -1.502882e-02
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 69.107
+rel. change during last iteration : -9.51869e-06
+
+degrees of freedom    (FIT_NDF)                        : 96
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.848448
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.719864
+p-value of the Chisq distribution (FIT_P)              : 0.982557
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A               = 10.3031          +/- 0.7287       (7.072%)
+mu              = 4.94939          +/- 0.164        (3.314%)
+sigma           = 2.65835          +/- 0.1318       (4.957%)
+b               = -0.0150288       +/- 0.04104      (273.1%)
+
+correlation matrix of the fit parameters:
+                A      mu     sigma  b      
+A               1.000 
+mu              0.042  1.000 
+sigma          -0.578 -0.041  1.000 
+b               0.008  0.005 -0.209  1.000 
+
+
+*******************************************************************************
+Sun May  6 15:15:25 2018
+
+
+FIT:    data read from 'sample.dat' u 1:2:(sqrt(abs($2))) yerrors
+        format = x:z:s
+        #datapoints = 100
+function used for fitting: f(x)
+	f(x) = A*exp(-(x-mu)**2/(2*sigma**2)) + b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A             mu            sigma         b            
+   0 6.9106981923e+01   0.00e+00  1.84e+00    1.030314e+01   4.949392e+00   2.658346e+00  -1.502882e-02
+   1 6.9106976288e+01  -8.16e-03  1.84e-01    1.030299e+01   4.949813e+00   2.658405e+00  -1.502896e-02
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 69.107
+rel. change during last iteration : -8.1553e-08
+
+degrees of freedom    (FIT_NDF)                        : 96
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.848448
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.719864
+p-value of the Chisq distribution (FIT_P)              : 0.982557
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A               = 10.303           +/- 0.7286       (7.072%)
+mu              = 4.94981          +/- 0.164        (3.314%)
+sigma           = 2.65841          +/- 0.1318       (4.957%)
+b               = -0.015029        +/- 0.04104      (273.1%)
+
+correlation matrix of the fit parameters:
+                A      mu     sigma  b      
+A               1.000 
+mu              0.042  1.000 
+sigma          -0.578 -0.041  1.000 
+b               0.008  0.005 -0.209  1.000 
