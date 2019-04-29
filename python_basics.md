@@ -1,6 +1,6 @@
 # Physik mit dem Raspberry Pi - Python-Basics 
 
-__16.04.2018, Sebastian Schmidt (sebastian.seb.schmidt@fau.de)__
+__29.04.2019, Sebastian Schmidt (sebastian.seb.schmidt@fau.de)__
 
 __[github.com/schmidtseb/RaspberryPiUebung]()__
 
